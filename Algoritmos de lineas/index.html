@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritmo directo</title>
+</head>
+<style>
+    html, body{
+        width: 100%;
+        height: 100%;
+    }
+
+    canvas{
+        margin: 50px;
+        margin-top: 0;
+        width: calc(100% - 100px);
+        height: calc(100% - 100px);
+        border: 2px solid black;
+    }
+
+    .radios{
+        text-align: center;
+        height: 50px;
+    }
+</style>
+<body>
+    <div class="radios">
+        <input checked id="basic" type="radio" name="calcType" value="basic"> <label for="basic">Básico</label>
+        <input id="dda" type="radio" name="calcType" value="dda"> <label for="dda">DDA</label>
+        <input id="bresenham" type="radio" name="calcType" value="bresenham"> <label for="bresenham">Bresenham</label>
+    </div>
+    
+    <canvas id="canvas"></canvas>
+</body>
+<script type="module" src="dibujar.js"></script>
+</html>
