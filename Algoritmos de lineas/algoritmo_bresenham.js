@@ -6,9 +6,6 @@ export function getBresenhamLinePoints(P1, P2){
     
     const incX = DX < 0 ? -1 : 1;
     const incY = DY < 0 ? -1 : 1;
-    
-    DX = Math.abs(DX);
-    DY = Math.abs(DY);
 
     const inc2DY = 2 * DY;
     const inc2DX = 2 * DX;
