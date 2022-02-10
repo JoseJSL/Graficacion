@@ -24,12 +24,32 @@
         text-align: center;
         height: 50px;
     }
+
+    #space{
+        margin-left: 5vh;
+    }
+
+    span{
+        margin-left: 2.5vh;
+    }
 </style>
 <body>
     <div class="radios">
         <input checked id="basic" type="radio" name="calcType" value="basic"> <label for="basic">Básico</label>
         <input id="dda" type="radio" name="calcType" value="dda"> <label for="dda">DDA</label>
         <input id="bresenham" type="radio" name="calcType" value="bresenham"> <label for="bresenham">Bresenham</label>
+        <input value="100" id="space" placeholder="Espacio p/pixel">
+        <button id="btnTest">Iniciar test</button>
+        <div>
+            <label>Básico: </label>
+            <label id="basicStopwatch">00:00:00</label>
+            <span></span>
+            <label>DDA: </label>
+            <label id="ddaStopwatch">00:00:00</label>
+            <span></span>
+            <label>Bresenham: </label>
+            <label id="bresenhamStopwatch">00:00:00</label>
+        </div>
     </div>
     
     <canvas id="canvas"></canvas>

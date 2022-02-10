@@ -1,7 +1,7 @@
 import { Point } from './dibujar.js';
 
 const calcY = (X, M, B) => Math.round(M * X + B);
-const calcX = (Y, M, B) => Math.round((Y - B) / M);
+const originalCalcX = (Y, M, B) => Math.round((Y - B) / M);
 
 function calcBiggerX(P1, P2, M, B){
     var Points = [];
@@ -17,6 +17,8 @@ function calcBiggerY(P1, P2, M, B){
     var Points = [];
     var inc = P2.Y < P1.Y ? -1 : 1;
     var Y = P1.Y - inc;
+
+    const calcX = isFinite(M) ? originalCalcX : () => P1.X; //Cuando la M es infinita (DX = 0), no se mueve la X;
 
     while(Y != P2.Y) Points.push(new Point(calcX(Y+=inc, M, B), Y));
 
